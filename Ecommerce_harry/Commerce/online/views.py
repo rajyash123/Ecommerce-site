@@ -81,3 +81,4 @@ def checkout(request):
         }
         return render(request, 'online/checkout.html', context)
     return render(request, 'online/checkout.html')
+

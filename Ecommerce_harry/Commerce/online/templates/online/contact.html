@@ -33,3 +33,13 @@ GoCart | Contact
     </div>
 
 {% endblock %}
+
+{% block js %}
+<script>
+  {% if thank %}
+    alert('thank you for contacting us we will get back to you soon');
+    document.location = '/contact/'
+  {% endif %}
+
+</script>
+{% endblock %}
