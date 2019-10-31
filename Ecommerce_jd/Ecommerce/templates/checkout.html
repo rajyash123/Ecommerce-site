@@ -1,0 +1,97 @@
+
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="container box-container">
+  <h1>Checkout</h1>
+  <hr>
+  <br>
+  <form action="" method="Post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button class="btn btn-primary" type="submit">Checkout</button>
+  <!-- <div class="md-form mb-5">
+      {{ form.street_address }}
+      <label for="address">Address</label>
+    </div>
+  
+    <div class="md-form mb-5">
+      {{ form.apartment_address }}
+      <label for="address">Apartment</label>
+    </div>
+    <div class="col-lg-4 col-md-12 mb-4">
+      <label for="country">Country</label>
+      {{ form.country }}
+      <div class="invalid-feedback">
+        Please select a valid country
+      </div>
+    </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <label for="zip">Zip</label>
+        {{ form.zip_code }}
+        <div class="invalid-feedback">
+          Zip code required
+        </div>
+      </div>
+      
+      <div class="custom-control custom-checkbox">
+        <input{% if form.same_billing_address %} checked {% endif %} type="checkbox" class="custom-control custom-radio">
+        <label for="same-address" class="custom-control-label">Shipping address is the same as the billing address</label>
+      </div>
+  
+      <div class="custom-control custom-checkbox">
+          <input{% if form.save_info %} checked {% endif %} type="checkbox" class="custom-control custom-radio">
+          <label for="same-address" class="custom-control-label">Shipping address is the same as the billing address</label>
+      </div>
+  
+      <div class="d-block my-3">
+        {% for value, text in form.fields.payment_option.choices %}
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" checked required name="paymentMethod" id="{{ text }}">
+          <label for="{{ text }}" class="custom-control-label">{{ text }}</label>
+        </div>
+        {% endfor %} 
+      </div>
+
+      <button class="btn btn-block btn-primary" type="submit">Checkout</button> -->
+  </form>
+<!-- container ends -->
+</div>
+
+ <!-- discount code container -->
+ <div class="container box-container">
+  {% include 'order_snippet.html' %}
+</div>
+<br><br><br><br><br>
+<!-- end discount code -->
+
+
+{% endblock content %}
+
+{% block extra_scripts %}
+<script>
+var hideable_shipping_form = $('.hideable_shipping_form');
+var hideable_billing_form = $('.hideable_billing_form');
+
+var use_default_shipping = document.querySelector("input[name=use_default_shipping]");
+var use_default_billing = document.querySelector("input[name=use_default_billing]");
+
+use_default_shipping.addEventListener('change', function() {
+if (this.checked) {
+  hideable_shipping_form.hide();
+} else {
+  hideable_shipping_form.show();
+}
+})
+
+use_default_billing.addEventListener('change', function() {
+if (this.checked) {
+  hideable_billing_form.hide();
+} else {
+  hideable_billing_form.show();
+}
+})
+
+</script>
+{% endblock extra_scripts %}
