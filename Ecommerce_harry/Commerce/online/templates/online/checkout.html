@@ -8,10 +8,16 @@ GoCart | Checkout
 <div class="container">
     <div class="col my-4">
         <h2>Step 1 - GoCart Express Checkout - Review Your Cart Items</h2>
-        <div id="items">
-            <ul class="list-group">
+        <div id="my-4">
+            <ul class="list-group" id="items">
                 
             </ul>
+            <nav aria-label="breadcumb">
+                <ul class="breadcrumb mt-3">
+                    <li class="breadcrumb-item active" aria-current="page">Your total price is Rs.<b><span id="totalPrice"></span></b>
+</li>
+                </ul>
+            </nav>
         </div>
     </div>
     <div class="col my-4">
@@ -71,17 +77,34 @@ GoCart | Checkout
     }
 
     console.log(cart);
-    for(var item in cart){
-        let name = cart[item][1];
-        let qty = cart[item][0];
-        let mystr = `
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                    ${name}
-                    <span class="badge badge-primary badge-pill">${qty}</span>
-            </li> 
-        `
-        $('#items').append(mystr);
+    var sum = 0;
+    var totalPrice = 0;
+
+    if($.isEmptyObject(cart)){
+        // if object is empty
+        mystr = `<p>Your cart is empty, please add some item to your cart before checkout</p>`
+        $('#items').append(mystr)
+    } else {
+        for(var item in cart){
+            let name = cart[item][1];
+            let qty = cart[item][0];
+            let itemPrice = cart[item][2];
+            totalPrice =  totalPrice + qty*itemPrice;
+            sum = sum + qty;
+            let mystr = `
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                        ${name}
+                        <span class="badge badge-primary badge-pill">${qty}</span>
+                </li> 
+            `
+            $('#items').append(mystr);
+        }
     }
+    
+
+    document.getElementById('cart').innerHTML = sum;
+    document.getElementById('totalPrice').innerHTML = totalPrice;
+    
 
     $('#itemJson').val(JSON.stringify(cart));
     {% if thank %}

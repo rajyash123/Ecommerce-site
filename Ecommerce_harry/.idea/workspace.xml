@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="116471c7-5642-46a5-8440-71840c3893f3" name="Default Changelist" comment="" />
+    <list default="true" id="116471c7-5642-46a5-8440-71840c3893f3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Commerce/online/templates/online/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/Commerce/online/templates/online/checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Commerce/online/templates/online/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Commerce/online/templates/online/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Commerce/online/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Commerce/online/views.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +22,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Commerce/online/models.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Commerce/online/templates/online/home.html" root0="SKIP_INSPECTION" />
@@ -24,8 +33,10 @@
     <setting file="file://$PROJECT_DIR$/Commerce/online/views.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1SL3Qvk32Mw4Skxthi4J77DxrlC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -56,5 +67,26 @@
       <updated>1571329035768</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

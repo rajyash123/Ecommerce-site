@@ -18,7 +18,7 @@ GoCart | Home
         <div class="card-body">
           <h5 class="card-title" id="namepr{{products.id}}">{{ products.product_name }}</h5>
           <p class="card-text">{{ products.description }}</p>
-          <h6 class="card-title" id="pricepr{{products.id}}">Price - {{products.price}}</h6>
+          <h6 class="card-title">Price - <span id="pricepr{{products.id}}">{{products.price}}</span></h6>
           <span id="divpr{{products.id}}" class="divpr">
             <button href="#" id="pr{{ products.id }}" class="btn btn-primary cart">Add to Cart</button>          
           </span> 
@@ -77,7 +77,7 @@ GoCart | Home
     {
       qty = 1;
       name = document.getElementById('name'+idstr).innerHTML;
-      cart[idstr] = [qty, name];
+      cart[idstr] = [qty, name, parseInt(price)];
     }
     updateCart(cart)
   });
