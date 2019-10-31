@@ -4,3 +4,4 @@ urlpatterns = [
     path('', views.home, name='blog-home'),
     path('blogpost/<int:id>/', views.blogpost, name='blogpost')
 ]
+
